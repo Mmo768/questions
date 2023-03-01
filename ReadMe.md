@@ -1,1 +1,1 @@
-/// <reference types="../@types/jquery" />
+https://mmo768.github.io/questions/
