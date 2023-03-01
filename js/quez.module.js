@@ -8,10 +8,18 @@ export class Quiz{
         this.displayQuestion();
         document.getElementById("nextQuestion").addEventListener('click',()=>{
 
+            $("#quiz .svg-wrapper a").removeClass("d-none");
+            $("#quiz .svg-wrapper svg").addClass("d-none");
+            $("#nextQuestion").attr("disabled","true");
+
                 this.checkAnswer();
                 setTimeout(()=>{
                     this.count++;
                     this.displayQuestion();
+
+                    $("#quiz .svg-wrapper a").addClass("d-none");
+                    $("#quiz .svg-wrapper svg").removeClass("d-none");
+                    $("#nextQuestion").removeAttr("disabled");
                 },1000);
 
 
